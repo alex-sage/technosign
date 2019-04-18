@@ -20,7 +20,8 @@ rgb_color hsvToRgb(uint16_t h, uint8_t s, uint8_t v)
     uint8_t q = (255 - f * (uint16_t)s / 255) * (uint16_t)v / 255;
     uint8_t t = (255 - (255 - f) * (uint16_t)s / 255) * (uint16_t)v / 255;
     uint8_t r = 0, g = 0, b = 0;
-    switch((h / 60) % 6){
+    switch ((h / 60) % 6)
+    {
         case 0: r = v; g = t; b = p; break;
         case 1: r = q; g = v; b = p; break;
         case 2: r = p; g = v; b = t; break;
@@ -41,7 +42,7 @@ void loop() {
   {
     colors[i] = rgb_color(255, 255, 255);
   }
-  
+
   ledStrip.write(colors, LED_COUNT);
 
   delay(100);
