@@ -9,11 +9,12 @@ PololuLedStrip<8> ledStrip;
 
 const uint16_t LETTER_COUNT = 10;
 
-// TODO: One of these are wrong. I broke a solder pad this summer, and had to cut if off. I guess we'll figure it out soon enough.
+// TODO: One of these are still wrong. I think it's the E which has one to many.
+// TODO: Will have to go through the start/end LEDs of each letter and check.
 
 // T
 const uint16_t T_1 = 0;
-const uint16_t T_2 = 16;
+const uint16_t T_2 = 15;
 // E
 const uint16_t E_1 = T_2 + 1;
 const uint16_t E_2 = E_1 + 22;
@@ -75,6 +76,9 @@ const rgb_color WHITE = rgb(100, 100, 100);
 const rgb_color RED = rgb(100, 0, 0);
 const rgb_color GREEN = rgb(0, 100, 0);
 const rgb_color BLUE = rgb(0, 0, 100);
+const rgb_color PURPLE = rgb(100, 0, 100);
+const rgb_color YELLOW = rgb(100, 100, 0);
+
 
 void all(rgb_color color)
 {
@@ -130,27 +134,36 @@ void setup()
     delay(1000);
 }
 
-void loop()
+void oneByOne(rgb_color color, int msDelay)
 {
     for (uint16_t i = 0; i < LETTER_COUNT; i++)
     {
-        letter(LETTER_MAP[i][0], RED);
+        letter(LETTER_MAP[i][0], color);
         write();
-        delay(200);
+        delay(msDelay);
     }
+}
 
-    for (uint16_t i = 0; i < LETTER_COUNT; i++)
+void snake(rgb_color color, int msDelay)
+{
+    for (uint16_t i = 0; i < LED_COUNT; i++)
     {
-        letter(LETTER_MAP[i][0], GREEN);
+        leds[i] = color;
         write();
-        delay(200);
+        delay(msDelay);
     }
+  
+}
 
-    for (uint16_t i = 0; i < LETTER_COUNT; i++)
-    {
-        letter(LETTER_MAP[i][0], BLUE);
-        write();
-        delay(200);
-    }
+void loop()
+{
+    oneByOne(RED, 200);
+    oneByOne(GREEN, 200);
+    oneByOne(BLUE, 200);
 
+    snake(RED, 50);
+    snake(PURPLE, 50);
+    snake(BLUE, 50);
+    snake(GREEN, 50);
+    snake(YELLOW, 50);
 }
