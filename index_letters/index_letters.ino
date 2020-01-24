@@ -26,7 +26,7 @@ const uint16_t H_1 = C_2 + 1;
 const uint16_t H_2 = H_1 + 24;
 // N
 const uint16_t N_1 = H_2 + 1;
-const uint16_t N_2 = N_1 + 29;
+const uint16_t N_2 = N_1 + 28;
 // O
 const uint16_t O_1 = N_2 + 1;
 const uint16_t O_2 = O_1 + 20;
@@ -157,13 +157,15 @@ void snake(rgb_color color, int msDelay)
 
 void loop()
 {
-    oneByOne(RED, 200);
-    oneByOne(GREEN, 200);
-    oneByOne(BLUE, 200);
+    int d1 = 100;
+    oneByOne(RED, d1);
+    oneByOne(GREEN, d1);
+    oneByOne(BLUE, d1);
 
-    snake(RED, 50);
-    snake(PURPLE, 50);
-    snake(BLUE, 50);
-    snake(GREEN, 50);
-    snake(YELLOW, 50);
+    int d2 = 30;
+    snake(RED, d2);
+    snake(PURPLE, d2);
+    snake(BLUE, d2);
+    snake(GREEN, d2);
+    snake(YELLOW, d2);
 }

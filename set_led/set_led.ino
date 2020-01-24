@@ -56,24 +56,36 @@ const rgb_color YELLOW = rgb(100, 100, 0);
 
 const rgb_color color_loop[5] = { BLANK, WHITE, RED, GREEN, BLUE };
 int color_idx = 0;
+int idx = 0;
 
 void loop()
 {
   if (Serial.available())
   {
-    int idx = Serial.parseInt();
+    idx = Serial.parseInt();
+    
+    while (Serial.available()) {
+      Serial.read();
+    }
+ } else {
+    delay(500);
+ }
+
     color_idx++;
     color_idx %= 5;
 
+
     for(uint16_t i = 0; i < LED_COUNT; i++)
     {
-	if (i == idx) {
-          colors[i] = color_loop[color_idx];
-	} else {
-	  colors[i] = BLANK;
-	}
+    	if (i == idx) {
+              colors[i] = color_loop[color_idx];
+    	} else {
+    	  colors[i] = BLANK;
+    	}
     }
 
     ledStrip.write(colors, LED_COUNT);
-  }
+
+    
+  
 }
