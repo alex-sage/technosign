@@ -22,11 +22,11 @@ class Sign
     // Pin where the LED strip is connected
     static const uint8_t LED_PIN = 12;
     // Total number of LEDs in the sign
-    static const uint16_t LED_COUNT_TOTAL = 213;
+    static const uint16_t LED_COUNT_TOTAL = 212;
     // Total number of letters in the sign
     static const uint8_t LETTER_COUNT = 10;
     // Contains umber of LEDs in the individual letters
-    const uint8_t _ledCounts[LETTER_COUNT] = {16, 22, 16, 24, 29, 20, 20, 24, 21, 21};
+    const uint8_t _ledCounts[LETTER_COUNT] = {16, 22, 16, 24, 28, 20, 20, 24, 21, 21};
     // Contains start index in _colorValues array for each letter
     uint8_t _letterStart[LETTER_COUNT];
     // Contains stop index in _colorValues array for each letter
