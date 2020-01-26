@@ -1,5 +1,10 @@
+#pragma once
+
+const uint16_t o = -1;
+
 const uint16_t GRID_ROWS = 10;
-const uint16_t GRID_COLS = 61;
+const uint16_t GRID_COLS = 62;
+
 const uint16_t LETTER_GRID[GRID_ROWS][GRID_COLS] = {
 //    T                                  E                        C                             H                             N                                       O                                  P                        A                                  R                        K                         
 //    0    1    2    3    4    5    6    0    1    2    3    4    0    1    2    3    4    5    0    1    2    3    4    5    0    1    2    3    4    5    6    7    0    1    2    3    4    5    6    0    1    2    3    4    0    1    2    3    4    5    6    0    1    2    3    4    0    1    2    3    4    5
