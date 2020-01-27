@@ -2,37 +2,37 @@
 #include "common.h"
 
 // T
-const uint16_t T_1 = 0;
-const uint16_t T_2 = 15;
+const byte T_1 = 0;
+const byte T_2 = 15;
 // E
-const uint16_t E_1 = T_2 + 1;
-const uint16_t E_2 = E_1 + 22;
+const byte E_1 = T_2 + 1;
+const byte E_2 = E_1 + 22;
 // C
-const uint16_t C_1 = E_2 + 1;
-const uint16_t C_2 = C_1 + 16;
+const byte C_1 = E_2 + 1;
+const byte C_2 = C_1 + 16;
 // H
-const uint16_t H_1 = C_2 + 1;
-const uint16_t H_2 = H_1 + 24;
+const byte H_1 = C_2 + 1;
+const byte H_2 = H_1 + 24;
 // N
-const uint16_t N_1 = H_2 + 1;
-const uint16_t N_2 = N_1 + 28;
+const byte N_1 = H_2 + 1;
+const byte N_2 = N_1 + 28;
 // O
-const uint16_t O_1 = N_2 + 1;
-const uint16_t O_2 = O_1 + 20;
+const byte O_1 = N_2 + 1;
+const byte O_2 = O_1 + 20;
 // P
-const uint16_t P_1 = O_2 + 1;
-const uint16_t P_2 = P_1 + 20;
+const byte P_1 = O_2 + 1;
+const byte P_2 = P_1 + 20;
 // A
-const uint16_t A_1 = P_2 + 1;
-const uint16_t A_2 = A_1 + 24;
+const byte A_1 = P_2 + 1;
+const byte A_2 = A_1 + 24;
 // R
-const uint16_t R_1 = A_2 + 1;
-const uint16_t R_2 = R_1 + 21;
+const byte R_1 = A_2 + 1;
+const byte R_2 = R_1 + 21;
 // K
-const uint16_t K_1 = R_2 + 1;
-const uint16_t K_2 = K_1 + 21;
+const byte K_1 = R_2 + 1;
+const byte K_2 = K_1 + 21;
 
-const uint16_t LETTER_MAP[LETTER_COUNT][3] = {
+const byte LETTER_MAP[LETTER_COUNT][3] = {
   { 'T', T_1, T_2 },
   { 'E', E_1, E_2 },
   { 'C', C_1, C_2 },
@@ -45,16 +45,14 @@ const uint16_t LETTER_MAP[LETTER_COUNT][3] = {
   { 'K', K_1, K_2 },
 };
 
-//const uint16_t LED_COUNT = K_2 + 1;
-//rgb_color leds[LED_COUNT];
 
 /**
  * Sets the same color for one letter.
  */
-void letter(uint16_t letter, rgb_color color)
+void letter(byte letter, rgb_color color)
 {
-    uint16_t start;
-    uint16_t end;
+    byte start;
+    byte end;
     bool found = false;
 
     for (int i = 0; i < LETTER_COUNT; i++)
@@ -73,7 +71,7 @@ void letter(uint16_t letter, rgb_color color)
         return;
     }
 
-    for (uint16_t i = start; i <= end; i++)
+    for (byte i = start; i <= end; i++)
     {
         leds[i] = color;
     }
@@ -85,7 +83,7 @@ void letter(uint16_t letter, rgb_color color)
  */
 void oneByOne(rgb_color color, int msDelay)
 {
-    for (uint16_t i = 0; i < LETTER_COUNT; i++)
+    for (byte i = 0; i < LETTER_COUNT; i++)
     {
         letter(LETTER_MAP[i][0], color);
         write();
