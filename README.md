@@ -9,5 +9,5 @@
 
 
 * index_letters - First go at usign the LED and some fun functions.
-* set_led - set a single LED by serial control; for debugging
-* test_letters - rudimentary test of the strip
+* set_led - set a single LED by serial control; for debugging.
+* test_letters - rudimentary test of the strip.
