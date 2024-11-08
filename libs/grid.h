@@ -1,11 +1,11 @@
 #pragma once
 
-const uint16_t o = -1;
+const byte o = -1;
 
-const uint16_t GRID_ROWS = 10;
-const uint16_t GRID_COLS = 62;
+const byte GRID_ROWS = 10;
+const byte GRID_COLS = 62;
 
-const uint16_t LETTER_GRID[GRID_ROWS][GRID_COLS] = {
+const byte LETTER_GRID[GRID_ROWS][GRID_COLS] = {
 //    T                                  E                        C                             H                             N                                       O                                  P                        A                                  R                        K                         
 //    0    1    2    3    4    5    6    0    1    2    3    4    0    1    2    3    4    5    0    1    2    3    4    5    0    1    2    3    4    5    6    7    0    1    2    3    4    5    6    0    1    2    3    4    0    1    2    3    4    5    6    0    1    2    3    4    0    1    2    3    4    5
    {    9,  10,  11,  12,  13,  14,  15,  29,  30,  31,  32,  33,   o,   o,   o,  51,  52,   o,  68,   o,   o,   o,   o,  67,  87,  88,   o,   o,   o,   o,   o,   o,   o,   o,   o, 116, 117,   o,   o, 135, 136, 137, 138,   o,   o,   o, 146, 169,   o,   o,   o, 179, 180, 181,   o,   o, 200,   o,   o,   o,   o, 201 },
