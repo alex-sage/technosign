@@ -1,6 +1,8 @@
 # technosign
   _The Technopark LED Sign Project_
 
+![sign](documentation/technopark_grid_index.png)
+
 * documentation - layout and mapping documents
 
 * LED_RTOS - Real Time OS for the LED strip
