@@ -1,6 +1,10 @@
 
 # 2024-11-08
 
+ESP32: Just trying stuff out for now.
+
+# 2024-11-08
+
 The full sign; all letters, all 211 LEDs work again.
 
 It seems like there is a short somewhere near the H or N. When the cables and letters are moved around there, there is a cut or short. Also, while touching the sign, there's often a small shock. The cables are touching the sign somewhere.

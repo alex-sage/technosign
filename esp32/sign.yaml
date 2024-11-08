@@ -1,0 +1,39 @@
+esphome:
+  name: technopark
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret api
+
+ota:
+  - platform: esphome
+    password: !secret api
+
+wifi:
+  ssid: !secret ssid
+  password: !secret wifipass
+
+  manual_ip:
+    static_ip: 192.168.0.197
+    subnet: 255.255.255.0
+    gateway: 192.168.0.254
+
+web_server:
+  port: 80
+  ota: False
+
+switch:
+  - platform: gpio
+    name: "led2"
+    pin: GPIO02
+    id: gpio_d2
+
+    
