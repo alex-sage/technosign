@@ -1,3 +1,6 @@
+# 2024-11-11
+
+Hooked up the ESP32 to the sign, and got a number of things to work. [See details here](esp32/notes.md).
 
 # 2024-11-08
 
