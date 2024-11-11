@@ -37,11 +37,6 @@ web_server:
   port: 80
   ota: False
 
-switch:
-  - platform: gpio
-    name: "led2"
-    pin: GPIO02
-    id: gpio_d2
 
 # https://esphome.io/components/light/neopixelbus
 # https://esphome.io/components/light/partition
@@ -120,12 +115,56 @@ light:
 
   - platform: partition
     name: "letter_10_K"
+    id: letter_10_K
     segments: 
       - id: technopark
         from: 191
         to: 211
 
 
+switch:
+  - platform: gpio
+    name: "led2"
+    pin: GPIO02
+    id: gpio_d2
+
+  - platform: template
+    name: "All Red"
+    optimistic: True
+    turn_on_action:
+      - light.addressable_set:
+          id: technopark
+          red: 100%
+    turn_off_action:
+      - light.addressable_set:
+          id: technopark
+          red: 0%
+
+  - platform: template
+    name: "All Green"
+    optimistic: True
+    turn_on_action:
+      - light.addressable_set:
+          id: technopark
+          green: 100%
+    turn_off_action:
+      - light.addressable_set:
+          id: technopark
+          green: 0%
+
+  - platform: template
+    name: "All Blue"
+    optimistic: True
+    turn_on_action:
+      - light.addressable_set:
+          id: technopark
+          blue: 100%
+    turn_off_action:
+      - light.addressable_set:
+          id: technopark
+          blue: 0%
+
+            
     
 # https://esphome.io/components/display/addressable_light.html
 # https://esphome.io/automations/templates#config-lambda
