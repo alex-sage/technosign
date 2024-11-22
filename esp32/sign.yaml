@@ -131,6 +131,7 @@ switch:
   - platform: template
     name: "All Red"
     optimistic: True
+    restore_mode: RESTORE_DEFAULT_OFF
     turn_on_action:
       - light.addressable_set:
           id: technopark
@@ -143,6 +144,7 @@ switch:
   - platform: template
     name: "All Green"
     optimistic: True
+    restore_mode: RESTORE_DEFAULT_OFF
     turn_on_action:
       - light.addressable_set:
           id: technopark
@@ -155,6 +157,7 @@ switch:
   - platform: template
     name: "All Blue"
     optimistic: True
+    restore_mode: RESTORE_DEFAULT_OFF
     turn_on_action:
       - light.addressable_set:
           id: technopark
