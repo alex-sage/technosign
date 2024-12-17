@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 # 2024-12-17
 
 Final handover. The sign is on top of the cupboards in the Dev room, running the ESP32 board.
 
 We had to cut out one LED on the O, because it was broken. This was reflected in the letter indexes in sign.yml of this MR, however, documentation, C++ code has not been updated.
+=======
+# 2024-11-21
+
+Freecad models for 3D printing the brackets to hang up the power supply and MC boards.
+>>>>>>> ccb4f2ec67bafa8d346372fb47ac6c4701b7f68d
 
 # 2024-11-11
 
