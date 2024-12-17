@@ -1,3 +1,9 @@
+# 2024-12-17
+
+Final handover. The sign is on top of the cupboards in the Dev room, running the ESP32 board.
+
+We had to cut out one LED on the O, because it was broken. This was reflected in the letter indexes in sign.yml of this MR, however, documentation, C++ code has not been updated.
+
 # 2024-11-11
 
 Hooked up the ESP32 to the sign, and got a number of things to work. [See details here](esp32/notes.md).

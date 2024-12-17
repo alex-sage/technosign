@@ -8,7 +8,7 @@
 PololuLedStrip<8> ledStrip;
 
 // Create a buffer for holding the colors (3 bytes per color).
-const int LED_COUNT=220;
+const int LED_COUNT=212;
 rgb_color colors[LED_COUNT];
 
 void setup()

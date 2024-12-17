@@ -49,6 +49,7 @@ light:
     type: RGB
     pin: GPIO12
     num_leds: 212
+    restore_mode: RESTORE_DEFAULT_OFF
     
   - platform: partition
     name: "letter_01_T"
@@ -90,36 +91,36 @@ light:
     segments: 
       - id: technopark
         from: 106
-        to: 125
+        to: 124
 
   - platform: partition
     name: "letter_07_P"
     segments: 
       - id: technopark
-        from: 126
-        to: 145
+        from: 125
+        to: 144
 
   - platform: partition
     name: "letter_08_A"
     segments: 
       - id: technopark
-        from: 146
-        to: 169
+        from: 145
+        to: 168
 
   - platform: partition
     name: "letter_09_R"
     segments: 
       - id: technopark
-        from: 170
-        to: 190
+        from: 169
+        to: 189
 
   - platform: partition
     name: "letter_10_K"
     id: letter_10_K
     segments: 
       - id: technopark
-        from: 191
-        to: 211
+        from: 190
+        to: 210
 
 
 switch:
@@ -131,7 +132,7 @@ switch:
   - platform: template
     name: "All Red"
     optimistic: True
-    restore_mode: RESTORE_DEFAULT_OFF
+    restore_mode: RESTORE_DEFAULT_ON
     turn_on_action:
       - light.addressable_set:
           id: technopark

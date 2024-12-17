@@ -1,3 +1,7 @@
+# 2024-12-17
+
+ESP32 board works. sign.yml updated to reflect broken LED (see ../notes.md).
+
 # 2024-11-11
 
 Hooked up the ESP32 to the sign, and got a number of things to work. The `light` component can address the LED strip, using the "WS2812x" variant driver and "RGB" color ordering. It's connected to PIN IO12 (which is in the same location as the pin 8 on the Arduino).
